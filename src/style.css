@@ -1,0 +1,69 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #23372e;
+  background: #f5f1e8;
+  font-size: 13px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.app-shell { padding: 16px 16px 18px; }
+.app-header { padding-bottom: 14px; border-bottom: 1px solid #d7cbb8; }
+.eyebrow { font-size: 9px; letter-spacing: .17em; font-weight: 750; color: #94784d; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; }
+h1 { font-size: 25px; font-weight: 650; margin: 4px 0 7px; letter-spacing: -.4px; }
+h2 { font-size: 16px; font-weight: 650; margin: 0; }
+p { margin: 0; }
+.app-header > p { font-size: 12px; line-height: 1.5; color: #677267; }
+.overview { display: flex; align-items: center; justify-content: space-between; gap: 9px; margin-top: 12px; }
+.count { color: #6e624d; font-weight: 650; font-size: 11px; }
+.active-summary { color: #2c6750; font-size: 11px; font-weight: 750; }
+.portraits, .connection { margin-top: 17px; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px; gap: 10px; }
+.section-heading > span { font-size: 10px; color: #958c7c; }
+.portrait-list { display: grid; gap: 7px; }
+.portrait-row {
+  display: grid; grid-template-columns: 28px 55px minmax(0, 1fr);
+  align-items: center; gap: 10px;
+  border: 1px solid #dcd5c9; background: #fffcf7;
+  border-radius: 9px; padding: 8px 9px;
+  min-width: 0; transition: border-color .15s, background-color .15s;
+}
+.portrait-row.is-active { border-color: #a98750; background: #f5efdf; box-shadow: inset 3px 0 #b58a47; }
+.pad-number { font: 700 20px Georgia, serif; text-align: center; color: #806948; }
+.is-active .pad-number { color: #2d634a; }
+.thumb { height: 67px; width: 51px; border-radius: 5px; background: #e9e3d6;
+  display: grid; place-items: center; overflow: hidden; border: 1px solid #dcd4c5; }
+.thumb img { display: block; height: 100%; width: 100%; object-fit: contain; background: #1e342b; }
+.thumb img[hidden], .thumb span[hidden] { display: none; }
+.placeholder { color: #a5a090; font-size: 27px; line-height: 1; }
+.portrait-info { display: grid; gap: 8px; min-width: 0; }
+.portrait-name { display: block; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 650; }
+.row-actions { display: flex; gap: 6px; }
+.button { cursor: pointer; font-family: inherit; font-size: 11px; font-weight: 650;
+  border-radius: 6px; padding: 7px 8px; min-height: 29px; border: 1px solid #264c3b; }
+.button:disabled { opacity: .48; cursor: not-allowed; }
+.button:focus-visible { outline: 2px solid #b58948; outline-offset: 2px; }
+.button-primary { color: #fff; background: #28553f; }
+.button-primary:hover:not(:disabled) { background: #1c4431; }
+.button-outline { background: #fffdf8; color: #31533e; border-color: #c1b69f; }
+.button-outline:hover:not(:disabled) { background: #f0e9dc; }
+.row-actions .button { flex: 1; }
+.row-actions .button-outline { flex: 1.15; }
+.row-actions .button-primary { flex: .9; }
+.is-active .button-primary { background: #916e3d; border-color: #916e3d; }
+.helper { margin-top: 9px; font-size: 11px; line-height: 1.5; color: #747b6e; }
+.connection { padding: 12px; border: 1px solid #cbd4c6; border-radius: 9px; background: #ebf0e7; }
+.connection-row { display: flex; justify-content: space-between; gap: 10px; margin: 9px 0; font-size: 11px; }
+.row-title { color: #667667; }
+.connection-value { font-weight: 700; text-align: right; }
+#midi-arm { width: 100%; margin: 5px 0 11px; }
+.sync-row { border-top: 1px solid #cdd7c8; padding-top: 10px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.sync-copy { display: grid; gap: 3px; }
+.sync-copy strong { font-size: 12px; }
+.sync-copy span { font-size: 10px; color: #677667; }
+.button-small { min-width: 96px; color: #fff; background: #28553f; }
+.status-text { color: #576b59; font-size: 11px; margin: 11px 0 0; }
+.message { color: #26614b; font-size: 11px; margin-top: 7px; line-height: 1.4; overflow-wrap: anywhere; }
+.message.error { color: #a23c36; }
+@media (max-width: 370px) { .app-shell { padding: 12px; } .portrait-row { gap: 7px; padding: 7px; } }

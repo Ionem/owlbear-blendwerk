@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blendwerk – Porträtbühne</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  </head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <div class="eyebrow">KÖNIGSMACHER · BLENDWERK</div>
+      <h1>Porträtbühne</h1>
+      <p>Sieben Bildplätze für die Owlbear-Spieleransicht. Bild wählen, Pad drücken, Porträt zeigen.</p>
+      <div class="overview" aria-live="polite">
+        <span id="count" class="count">0 / 7 belegt</span>
+        <span id="active" class="active-summary">Karte sichtbar</span>
+      </div>
+    </header>
+
+    <section class="portraits" aria-label="Sieben Porträtplätze">
+      <div class="section-heading">
+        <h2>Bildplätze 1–7</h2>
+        <span>Owlbear-Bibliothek</span>
+      </div>
+      <div id="portrait-list" class="portrait-list"></div>
+      <p class="helper">Ein Druck zeigt das gewählte Porträt. Derselbe Pad-Druck blendet es wieder aus. Ein anderes Pad wechselt direkt zum nächsten Bild. Ohne Launch Control: Alt+1 bis Alt+7 für die Porträts, Alt+8 für Sync View.</p>
+    </section>
+
+    <section class="connection" aria-label="Launch Control und Sync View">
+      <div class="section-heading"><h2>Verbindung</h2><span>Bank 2</span></div>
+      <div class="connection-row">
+        <span class="row-title">Launch Control</span>
+        <span id="midi-status" class="connection-value">Prüfe …</span>
+      </div>
+      <div class="connection-row">
+        <span class="row-title">Präsentationsraum</span>
+        <span id="room-status" class="connection-value">Prüfe …</span>
+      </div>
+      <button id="midi-arm" type="button" class="button button-outline" disabled>Raum aktivieren</button>
+      <div class="sync-row">
+        <div class="sync-copy">
+          <strong>Pad 8 · Sync View</strong>
+          <span id="sync-label">Status wird geprüft …</span>
+        </div>
+        <button id="sync" type="button" class="button button-small" disabled>Umschalten</button>
+      </div>
+    </section>
+    <p id="speaker-status" class="status-text" aria-live="polite"></p>
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+  </main>
+  <script type="module" src="./src/panel.js"></script>
+</body>
+</html>

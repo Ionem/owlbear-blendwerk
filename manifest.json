@@ -1,0 +1,16 @@
+{
+  "name": "Blendwerk: Porträtbühne",
+  "version": "0.7.2",
+  "manifest_version": 1,
+  "description": "Sieben Porträtplätze auf Meister und Cast, gesteuert über MIDI, Tastatur oder Maus.",
+  "author": "Blendwerk",
+  "icon": "/owlbear-blendwerk/viewjump.svg",
+  "background_url": "/owlbear-blendwerk/background.html",
+  "action": {
+    "title": "Porträtbühne",
+    "icon": "/owlbear-blendwerk/viewjump.svg",
+    "popover": "/owlbear-blendwerk/index.html",
+    "width": 420,
+    "height": 660
+  }
+}
